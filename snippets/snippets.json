@@ -1,0 +1,75 @@
+{
+    "For loop": {
+        "prefix": "for",
+        "body": [
+            "for ($1; $2; $3)",
+            "{",
+            "\t$4",
+            "}"
+        ],
+        "description": "Head and body of for loop"
+    },
+    "While loop": {
+        "prefix": "while",
+        "body": [
+            "while ($1)",
+            "{",
+            "\t$2",
+            "}"
+        ],
+        "description": "Head and body of while loop"
+    },
+    "If statement": {
+        "prefix": "if",
+        "body": [
+            "if ($1)",
+            "{",
+            "\t$2",
+            "}"
+        ],
+        "description": "Standard if statement"
+    },
+    "Else statement": {
+        "prefix": "else",
+        "body": [
+            "else",
+            "{",
+            "\t$1",
+            "}"
+        ],
+        "description": "Standard else statement"
+    },
+    "Else if statement": {
+        "prefix": "else if",
+        "body": [
+            "else if ($1)",
+            "{",
+            "\t$2",
+            "}"
+        ],
+        "description": "Standard else if statement"
+    },
+    "Function": {
+        "prefix": "fn",
+        "body": [
+            "fn $1($2)",
+            "{",
+            "\t$3",
+            "}"
+        ],
+        "description": "Function in MT"
+    },
+    "Class": {
+        "prefix": "class",
+        "body": [
+            "class $1",
+            "{",
+            "\tinit($2)",
+            "\t{",
+            "\t\tthis.$2 = $2",
+            "\t}",
+            "}"
+        ],
+        "description": "Class with initialiser"
+    }
+}

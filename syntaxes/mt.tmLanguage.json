@@ -1,0 +1,151 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MT",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#statements"
+		},
+		{
+			"include": "#callables"
+		},
+		{
+			"include": "#digits"
+		},
+		{
+			"include": "#idents"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.mt",
+					"match": "\\b(if|else|while|for|return)\\b"
+				},
+				{
+					"name": "constant.language.null.mt",
+					"match": "\\b(nil)\\b"
+				},
+				{
+					"name": "constant.language.boolean.mt",
+					"match": "\\b(true|false)\\b"
+				},
+				{
+					"name": "support.function.builtin.mt",
+					"match": "\\b(print)\\b"
+				},
+				{
+					"name": "variable.language.this.mt",
+					"match": "\\b(this)\\b"
+				},
+				{
+					"name": "variable.language.super.mt",
+					"match": "\\b(super)\\b"
+				}
+			]
+		},
+		"statements": {
+			"patterns": [
+				{
+					"match": "\\b(var)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.mt"
+						},
+						"2": {
+							"name": "support.variable.mt"
+						}
+					}
+				},
+				{
+					"match": "\\b(fn)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9,\\s]*)\\)",
+					"captures": {
+						"1": {
+							"name":"storage.type.function.mt"
+						},
+						"2": {
+							"name":"entity.name.function.mt"
+						},
+						"3": {
+							"patterns": [
+								{
+									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+									"name": "variable.parameter.mt"
+								}
+							]
+						}
+					}
+				},
+				{
+					"match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s*(<)\\s*([A-Za-z_][A-Za-z0-9_]*))?\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.class.mt"
+						},
+						"2": {
+							"name": "entity.name.type.class.mt"
+						},
+						"3": {
+							"name": "storage.modifier.mt"
+						},
+						"4": {
+							"name": "entity.name.type.class.mt"
+						}
+					}
+				}
+			]
+		},
+		"callables": {
+			"patterns": [
+				{
+					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(",
+					"name": "support.function.mt"
+				}
+			]
+		},
+		"digits": {
+			"patterns": [
+				{
+					"name": "constant.numeric.mt",
+					"match": "\\b[0-9]+(?:.[0-9]+)?\\b"
+				}
+			]
+		},
+		"ident": {
+			"patterns": [
+				{
+					"name": "variable.other.readwrite.mt",
+					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.mt",
+				"begin": "//",
+				"end": "\n"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.mt",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mt",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.mt"
+}

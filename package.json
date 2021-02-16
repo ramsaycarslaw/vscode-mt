@@ -1,0 +1,32 @@
+{
+    "name": "vscode-mt",
+    "publisher": "mtlang",
+    "displayName": "vscode-MT",
+    "description": "Basic syntax support for MT in vscode",
+    "version": "0.0.2",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mt",
+            "aliases": ["MT", "mt"],
+            "extensions": [".MT",".MTL", ".mt", ".mtl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mt",
+            "scopeName": "source.mt",
+            "path": "./syntaxes/mt.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "mt",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
