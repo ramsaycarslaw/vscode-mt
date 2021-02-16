@@ -71,5 +71,12 @@
             "}"
         ],
         "description": "Class with initialiser"
+    },
+    "Variable": {
+      "prefix": "var",
+      "body": [
+        "var $1 = $2;"
+      ],
+      "description": "Initialise a variable"
     }
 }

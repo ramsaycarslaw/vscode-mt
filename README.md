@@ -1,6 +1,6 @@
 # vscode-mt 
 
-MT is a dynamically typed, open source programming language intended as a halfway point between C and Python. For more infomation see ![the github repo](https://github.com/ramsaycarslaw/mt).
+MT is a dynamically typed, open source programming language intended as a halfway point between C and Python. For more infomation see [the github repo](https://github.com/ramsaycarslaw/mt).
 
 ## Features
 
@@ -19,6 +19,11 @@ Currently there are no settings although there may be some added in future versi
 ## Release Notes
 
 You can find infomation about each release below.
+
+### 0.03
+
+* Added even more snippets
+* Fix some bugs in the README
 
 ### 0.0.2
 
