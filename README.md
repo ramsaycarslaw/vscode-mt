@@ -20,7 +20,11 @@ Currently there are no settings although there may be some added in future versi
 
 You can find infomation about each release below.
 
-### 0.03
+### 0.0.4
+
+* Support the `use` keyword.
+
+### 0.0.3
 
 * Added even more snippets
 * Fix some bugs in the README

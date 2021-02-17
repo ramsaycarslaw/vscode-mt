@@ -78,5 +78,12 @@
         "var $1 = $2;"
       ],
       "description": "Initialise a variable"
+    },
+    "Use/import": {
+        "prefix": "use",
+        "body": [
+            "use \"$1\";"
+        ],
+        "description": "Use statement in MT"
     }
 }
