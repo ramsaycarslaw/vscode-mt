@@ -8,6 +8,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 You can find infomation about each release below.
 
+
+### 0.0.6
+
+* Support `switch`, `case` and `default` keywords and snippets
+
 ### 0.0.5
 
 * Support the new `break` and `continue` keywords

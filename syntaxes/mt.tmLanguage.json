@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.mt",
-					"match": "\\b(if|else|while|for|return|use|continue|break)\\b"
+					"match": "\\b(if|else|while|for|return|use|continue|break|switch|case|default)\\b"
 				},
 				{
 					"name": "constant.language.null.mt",
