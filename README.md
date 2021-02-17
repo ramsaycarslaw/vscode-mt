@@ -20,6 +20,10 @@ Currently there are no settings although there may be some added in future versi
 
 You can find infomation about each release below.
 
+### 0.0.5
+
+* Support the new `break` and `continue` keywords
+
 ### 0.0.4
 
 * Support the `use` keyword.
